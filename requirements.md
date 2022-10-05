@@ -14,6 +14,7 @@
  9. **<u>Alerts are sent when given asset's value will be reached. (mobile and email alerts)</u>**
  10. Reports are sent weekly to email.
  11. Investigate integration with bank accounts or crypto stock markets.
+ 12. Investigate api that has information about huge daily changes of some assets.
 
 ## Definitions 
 | Term | Description |
