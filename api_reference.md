@@ -39,28 +39,6 @@ PUT /api/users/
 
 <br>
 
-### Wallet
----
-
-#### ∘ Get history of total UserAssets value
-
-Also used to:
-* get current UserAssets' total value
-* get the difference between total values from last day and today
-
-```
-GET /api/user-assets/history?date-from=<dateFrom>&date-to=<dateTo>
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `dateFrom`      | `date` | **Required**. Beginning date of assetTotalValue|
-| `dateTo`      | `date` | **Required**. End date of assetTotalValue |
-
-response: Dict<date;totalUserAssetsValue>
-
-<br>
-
 ### Assets
 ---
 
@@ -123,6 +101,29 @@ action: deletes UserAsset and adds record to user's transaction history
 
 <br>
 
+### Wallet
+---
+
+#### ∘ Get history of total UserAssets value
+
+Also used to:
+* get current UserAssets' total value
+* get the difference between total values from last day and today
+
+```
+GET /api/user-assets/history?date-from=<dateFrom>&date-to=<dateTo>
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `dateFrom`      | `date` | **Required**. Beginning date of assetTotalValue|
+| `dateTo`      | `date` | **Required**. End date of assetTotalValue |
+
+response: Dict<date;totalUserAssetsValue>
+
+<br>
+
+
 ### Transactions
 ---
 
@@ -138,6 +139,8 @@ GET /api/transactions?date-from=<dateFrom>&date-to=<dateTo>
 | `dateTo`      | `date` | **Required**. End date of assetTotalValue |
 
 response: Dict<assetName, value, date>
+
+<br>
 
 ### Alerts
 ---
