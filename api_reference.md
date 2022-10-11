@@ -12,11 +12,26 @@ GET /api/users/
 
 response: Dict<userName, userEmail, userCurrency, userWeeklyReports, userAlertsOnEmail>
 
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `userCurrency`      | `string` | Defines user's main currency (PLN/EUR/USD) |
+| `userWeeklyReports`      | `boolean` | Determines whether user will get weekly reports |
+| `userAlertsOnEmail`      | `boolean` | Determines whether user will get alerts on email |
+
+
 #### ∘ Update user's data
 
 ```
 PUT /api/users/
 ```
+body: Dict<userCurrency, userWeeklyReports, userAlertsOnEmail>
+
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `userCurrency`      | `string` | Defines user's main currency (PLN/EUR/USD) |
+| `userWeeklyReports`      | `boolean` | Determines whether user will get weekly reports |
+| `userAlertsOnEmail`      | `boolean` | Determines whether user will get alerts on email |
 
 #### ∘ Login
 
@@ -75,7 +90,7 @@ Investigate external api's
 ```
 POST /api/user-assets/
 ```
-body: Dict<asset-id, value>
+body: Dict<assetId, value>
 
 Can create many UserAssets at once.
 
