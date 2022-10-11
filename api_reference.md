@@ -166,4 +166,4 @@ PUT  /api/alerts/id
 ```
 body: Dict< targetValue>
 
-returns: Dict<alertId, targetValue, originAssetName, targetCurrency, originAssetType>
+response: Dict<alertId, targetValue, originAssetName, targetCurrency, originAssetType>
