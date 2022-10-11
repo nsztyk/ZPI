@@ -70,6 +70,9 @@ response: Array<assetId, assetName, assetFriendlyName, assetType>
 PUT /api/assets/
 ```
 body: Dict<assetName, valueUSD, dateTime>
+after updating assetPrice there should be PUT to alerts microservice:
+body: updatedAssetName, Dict<assetName, valueUSD>
+The dict contains all assets.
 
 #### ∘ Get asset history
 ```
@@ -158,6 +161,7 @@ response: Dict<assetName, value, date>
 <br>
 
 ### Alerts
+alerts endpoints are only proxy beetwen c# service and microservice. There should not be any Alerts database model in c# (only DTO).
 ---
 
 #### ∘ Get alerts
@@ -172,6 +176,9 @@ response: Dict<alertId, targetValue, originAssetName, targetCurrency, originAsse
 POST /api/alerts/
 ```
 body: Dict<originAssetName, targetCurrency, targetValue>
+The proxy should sent to microservice:
+body: <originAssetName, targetCurrency, targetValue, email, currentValue>
+currentValue - originAsset currentValue in targetCurrency
 
 #### ∘ Delete alert
 ```
@@ -179,6 +186,7 @@ DELETE /api/alerts/id
 ```
 
 #### ∘ Update alert
+?
 ```
 PUT  /api/alerts/id
 ```
