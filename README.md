@@ -1,4 +1,5 @@
 # ZPI
+- main back-end serivce: https://github.com/Friztek/zpi-api
 - updater microservice: https://github.com/barte525/updater
 - alerts microservice: https://github.com/barte525/alerts
 ## Licence
