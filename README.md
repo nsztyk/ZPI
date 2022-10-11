@@ -2,6 +2,7 @@
 - main back-end serivce: https://github.com/Friztek/zpi-api
 - updater microservice: https://github.com/barte525/updater
 - alerts microservice: https://github.com/barte525/alerts
+- mobile application: https://github.com/ale-gen/HowMoney
 ## Licence
 ![MIT Licence](https://img.shields.io/badge/license-MIT-20b347)
 
