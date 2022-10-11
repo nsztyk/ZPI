@@ -4,7 +4,7 @@
 ---
 
 
-#### ∘ Get user's data
+#### ∘ Get user's data *
 
 ```
 GET /api/users/
@@ -19,7 +19,7 @@ response: Dict<userName, userEmail, userCurrency, userWeeklyReports, userAlertsO
 | `userAlertsOnEmail`      | `boolean` | Determines whether user will get alerts on email |
 
 
-#### ∘ Update user's data
+#### ∘ Update user's data *
 
 ```
 PUT /api/users/
@@ -33,20 +33,20 @@ body: Dict<userCurrency, userWeeklyReports, userAlertsOnEmail>
 | `userWeeklyReports`      | `boolean` | Determines whether user will get weekly reports |
 | `userAlertsOnEmail`      | `boolean` | Determines whether user will get alerts on email |
 
-#### ∘ Login
+#### ∘ Login *
 
 ```
 
 ```
 
-#### ∘ Registration
+#### ∘ Registration *
 
 ```
 
 ```
 
 
-#### ∘ Password change
+#### ∘ Password change *
 
 ```
 
@@ -58,14 +58,14 @@ body: Dict<userCurrency, userWeeklyReports, userAlertsOnEmail>
 ---
 
 
-#### ∘ Get all assets
+#### ∘ Get all assets *
 ```
 GET /api/assets/
 ```
 response: Array<assetId, assetName, assetFriendlyName, assetType>
 
 
-#### ∘ Update asset's value
+#### ∘ Update asset's value *
 ```
 PUT /api/assets/
 ```
@@ -74,7 +74,7 @@ after updating assetPrice there should be PUT to alerts microservice:
 body: updatedAssetName, Dict<assetName, valueUSD>
 The dict contains all assets.
 
-#### ∘ Get asset history
+#### ∘ Get asset history 
 ```
 GET /api/asset-history?date-from=<dateFrom>&date-to=<dateTo>&asset-name=<assetName>
 ```
@@ -89,7 +89,7 @@ Investigate external api's
 ### UserAssets
 ---
 
-#### ∘ Create UserAsset
+#### ∘ Create UserAsset *
 ```
 POST /api/user-assets/
 ```
@@ -98,7 +98,7 @@ body: Dict<assetId, value>
 Can create many UserAssets at once.
 
 
-#### ∘ Update UserAsset
+#### ∘ Update UserAsset *
 ```
 PATCH /api/user-assets/
 ```
@@ -111,7 +111,7 @@ body: Dict<operationType, assetId, value>
 | update  |
 
 
-#### ∘ Delete user asset
+#### ∘ Delete user asset *
 ```
 DELETE /api/user-assets/id
 ```
@@ -164,14 +164,14 @@ response: Dict<assetName, value, date>
 alerts endpoints are only proxy beetwen c# service and microservice. There should not be any Alerts database model in c# (only DTO).
 ---
 
-#### ∘ Get alerts
+#### ∘ Get alerts *
 
 ```
 GET /api/alerts/
 ```
 response: Dict<alertId, targetValue, originAssetName, targetCurrency, originAssetType>
 
-#### ∘ Create alert
+#### ∘ Create alert *
 ```
 POST /api/alerts/
 ```
@@ -180,12 +180,12 @@ The proxy should sent to microservice:
 body: <originAssetName, targetCurrency, targetValue, email, currentValue>
 currentValue - originAsset currentValue in targetCurrency
 
-#### ∘ Delete alert
+#### ∘ Delete alert *
 ```
 DELETE /api/alerts/id
 ```
 
-#### ∘ Update alert
+#### ∘ Update alert *
 ?
 ```
 PUT  /api/alerts/id
