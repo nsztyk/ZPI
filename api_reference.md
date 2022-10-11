@@ -3,6 +3,21 @@
 ### User
 ---
 
+
+#### ∘ Get user's data
+
+```
+GET /api/users/
+```
+
+response: Dict<userName, userEmail, userCurrency, userWeeklyReports, userAlertsOnEmail>
+
+#### ∘ Update user's data
+
+```
+PUT /api/users/
+```
+
 #### ∘ Login
 
 ```
@@ -10,6 +25,13 @@
 ```
 
 #### ∘ Registration
+
+```
+
+```
+
+
+#### ∘ Password change
 
 ```
 
@@ -42,8 +64,6 @@ response: Dict<date;totalUserAssetsValue>
 ### Assets
 ---
 
-#### ∘ Trends of assets
-Investigate external api's
 
 #### ∘ Get all assets
 ```
@@ -57,6 +77,16 @@ response: Array<assetId, assetName, assetFriendlyName, assetType>
 PUT /api/assets/
 ```
 body: Dict<assetName, valueUSD, dateTime>
+
+#### ∘ Get asset history
+```
+GET /api/asset-history?date-from=<dateFrom>&date-to=<dateTo>&asset-name=<assetName>
+```
+response: Dict<value(+), date>
+
+
+#### ∘ Trends of assets
+Investigate external api's
 
 <br>
 
@@ -108,3 +138,32 @@ GET /api/transactions?date-from=<dateFrom>&date-to=<dateTo>
 | `dateTo`      | `date` | **Required**. End date of assetTotalValue |
 
 response: Dict<assetName, value, date>
+
+### Alerts
+---
+
+#### ∘ Get alerts
+
+```
+GET /api/alerts/
+```
+response: Dict<alertId, targetValue, originAssetName, targetCurrency, originAssetType>
+
+#### ∘ Create alert
+```
+POST /api/alerts/
+```
+body: Dict<originAssetName, targetCurrency, targetValue>
+
+#### ∘ Delete alert
+```
+DELETE /api/alerts/id
+```
+
+#### ∘ Update alert
+```
+PUT  /api/alerts/id
+```
+body: Dict< targetValue>
+
+returns: Dict<alertId, targetValue, originAssetName, targetCurrency, originAssetType>
