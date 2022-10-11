@@ -1,6 +1,6 @@
 # ZPI
-updater microservice: https://github.com/barte525/updater
-alerts microservice: https://github.com/barte525/alerts
+- updater microservice: https://github.com/barte525/updater
+- alerts microservice: https://github.com/barte525/alerts
 ## Licence
 ![MIT Licence](https://img.shields.io/badge/license-MIT-20b347)
 
