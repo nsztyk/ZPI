@@ -1,6 +1,6 @@
 # Project requirements
 
-## Reqiurements
+## Requirements
 
  1. **<u>System has a defined set of assets, which price is updated automatically from external services.</u>**
  
