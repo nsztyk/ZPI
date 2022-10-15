@@ -89,6 +89,13 @@ Investigate external api's
 ### UserAssets
 ---
 
+#### ∘ Get all UserAssets *
+```
+GET /api/user-assets/
+```
+response: Array<assetId, assetName, assetFriendlyName, assetType, originValue, userCurrencyValue>
+
+
 #### ∘ Create UserAsset *
 ```
 POST /api/user-assets/
