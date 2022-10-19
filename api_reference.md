@@ -131,8 +131,9 @@ action: deletes UserAsset and adds record to user's transaction history
 
 #### ∘ Get history of total UserAssets value
 
+It should be saved somehow at the end of they (worker from c# side, or endpoint provided to execute the save and updater
+microservice sending the request.
 Also used to:
-* get current UserAssets' total value
 * get the difference between total values from last day and today
 
 ```
@@ -145,6 +146,10 @@ GET /api/user-assets/history?date-from=<dateFrom>&date-to=<dateTo>
 | `dateTo`      | `date` | **Required**. End date of assetTotalValue |
 
 response: Dict<date;totalUserAssetsValue>
+
+### ∘ Get current total User Assets value
+Sums all the assets of user, takes his currency preference and devide by it if nessesary, then returs it.
+response: totalUserAssetsValue
 
 <br>
 
