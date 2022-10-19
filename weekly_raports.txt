@@ -1,0 +1,11 @@
+
+Total value of your wallet is {current_wallet_value} and increased/descreased {(wallet_value_week_ago - current_wallet_value)/current_wallet_value *100%} from last weak.
+You have most of your money in {biggest_asset_name}, in which you have {biggest_asset_value/current_wallet_value*100%}
+
+All of the information can be taken from endpoints: 
+Get all assests
+Get current wallet value
+Get wallet value with date range
+
+
+
