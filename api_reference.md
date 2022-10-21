@@ -62,7 +62,7 @@ body: Dict<userCurrency, userWeeklyReports, userAlertsOnEmail>
 ```
 GET /api/assets/
 ```
-response: Array<assetId, assetName, assetFriendlyName, assetType>
+response: Array<assetId, assetName, assetFriendlyName, assetType, symbol>
 
 
 #### ∘ Update asset's value *
