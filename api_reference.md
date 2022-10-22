@@ -62,7 +62,7 @@ body: Dict<userCurrency, userWeeklyReports, userAlertsOnEmail>
 ```
 GET /api/assets/
 ```
-response: Array<Name, FriendlyName, Category, Symbol>
+response: Array<Name, FriendlyName, Category, Symbol> - for alerts microservice we will need this type of endoint but with Array<Name, Value> (join Asset and AssetValue)
 
 
 #### ∘ Update asset's value *
@@ -93,7 +93,7 @@ Investigate external api's
 ```
 GET /api/user-assets/
 ```
-response: Array<assetId, assetName, assetFriendlyName, assetType, originValue, userCurrencyValue>
+response: Array<assetId, assetName, assetFriendlyName, assetType, symbol, originValue, userCurrencyValue>
 
 
 #### ∘ Create UserAsset *
