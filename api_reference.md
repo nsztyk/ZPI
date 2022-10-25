@@ -80,6 +80,14 @@ GET /api/asset-history?date-from=<dateFrom>&date-to=<dateTo>&asset-name=<assetNa
 ```
 response: Dict<value(+), date>
 
+#### ∘ Get asset current
+```
+GET /api/asset-history
+```
+Same as get asset history but today and batch.
+
+response: Dict<name, value(+)>
+
 
 #### ∘ Trends of assets
 Investigate external api's
@@ -133,7 +141,7 @@ action: deletes UserAsset and adds record to user's transaction history
 
 It should be saved somehow at the end of they (worker from c# side, or endpoint provided to execute the save and updater
 microservice sending the request. Current date should be counted not from datebase, but should be counted from current UserAssets.
-Also this should be returned in users preferenceCurrency, which can be counted by joining it with "Get asset history" day=today view. 
+Also this should be returned in users preferenceCurrency, which can be counted by joining it with "Get asset history current" view. 
 Also used to:
 * get the difference between total values from last day and today
 
