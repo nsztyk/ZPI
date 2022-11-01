@@ -140,7 +140,7 @@ action: deletes UserAsset and adds record to user's transaction history
 #### ∘ Get history of total UserAssets value
 
 It should be saved somehow at the end of they (worker from c# side, or endpoint provided to execute the save and updater
-microservice sending the request. Current date should be counted not from datebase, but should be counted from current UserAssets.
+microservice sending the request.The value should be counted not from datebase, but should be counted from current UserAssets and saved in dolars.
 Also this should be returned in users preferenceCurrency, which can be counted by joining it with "Get asset history current" view. 
 Also used to:
 * get the difference between total values from last day and today
