@@ -205,12 +205,3 @@ currentValue - originAsset currentValue in targetCurrency
 ```
 DELETE /api/alerts/id
 ```
-
-#### ∘ Update alert *
-?
-```
-PUT  /api/alerts/id
-```
-body: Dict< targetValue>
-
-response: Dict<alertId, targetValue, originAssetName, targetCurrency, originAssetType>
