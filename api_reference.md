@@ -146,7 +146,7 @@ Also used to:
 * get the difference between total values from last day and today
 
 ```
-GET /api/user-assets/history?date-from=<dateFrom>&date-to=<dateTo>
+GET /api/api/wallet/?from=<dateFrom>&to=<dateTo>
 ```
 
 | Parameter | Type     | Description                       |
@@ -154,11 +154,17 @@ GET /api/user-assets/history?date-from=<dateFrom>&date-to=<dateTo>
 | `dateFrom`      | `date` | **Required**. Beginning date of assetTotalValue|
 | `dateTo`      | `date` | **Required**. End date of assetTotalValue |
 
-response: Dict<date;totalUserAssetsValue>
+response: Dict<timeStamp;value>
 
 ### ∘ Get current total User Assets value
 Sums all the assets of user, takes his currency preference and devide by it if nessesary, then returs it.
 response: totalUserAssetsValue
+
+```
+GET /api/api/wallet/total
+```
+
+response: totalValue
 
 <br>
 
