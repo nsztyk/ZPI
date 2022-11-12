@@ -121,9 +121,11 @@ body: Dict<operationType, assetId, value>
 
 | OperationType |
 | :-------- |
-| add      |
-| substract      |
-| update  |
+| update      |
+| set      |
+
+Update +/- and updated 
+Set only +, sets
 
 
 #### ∘ Delete user asset *
